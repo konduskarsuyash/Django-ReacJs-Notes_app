@@ -178,5 +178,5 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOW_CREDENTIALS = True
 
-mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("frontend/build/static/css", ".css", True)
 
