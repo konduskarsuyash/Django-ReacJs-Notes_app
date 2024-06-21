@@ -14,7 +14,8 @@ from pathlib import Path
 import os
 from urllib.parse import urlparse
 from django.core.management.utils import get_random_secret_key
-import mimetypes
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware", # Here
     "corsheaders.middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -178,5 +180,4 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOW_CREDENTIALS = True
 
-mimetypes.add_type("frontend/build/static/css", ".css", True)
 
